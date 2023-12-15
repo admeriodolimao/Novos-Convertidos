@@ -1,0 +1,90 @@
+
+
+<ion-content [fullscreen]="true">
+
+
+
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <ion-label>Formulário de Voluntários</ion-label>
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input formControlName="name"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="email" type="email"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input formControlName="password" type="password"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">CPF/CNPJ</ion-label>
+      <ion-input formControlName="cpfCnpj"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Empresa</ion-label>
+      <ion-input formControlName="company"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Celular</ion-label>
+      <ion-input formControlName="mobilePhone" type="tel"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Telefone</ion-label>
+      <ion-input formControlName="phone" type="tel"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">CEP</ion-label>
+      <ion-input formControlName="postalCode"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Endereço</ion-label>
+      <ion-input formControlName="address"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Bairro</ion-label>
+      <ion-input formControlName="province"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Estado</ion-label>
+      <ion-input formControlName="state"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Cidade</ion-label>
+      <ion-input formControlName="city"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Número</ion-label>
+      <ion-input formControlName="addressNumber"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Emails Adicionais</ion-label>
+      <ion-input formControlName="additionalEmails" type="email"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Observações</ion-label>
+      <ion-textarea formControlName="observations"></ion-textarea>
+    </ion-item>
+  
+    <!-- Campo invisível 'role' -->
+    <input formControlName="role" type="hidden">
+  
+    <ion-button expand="full" type="submit">Enviar</ion-button>
+  </form>
+  
+</ion-content>

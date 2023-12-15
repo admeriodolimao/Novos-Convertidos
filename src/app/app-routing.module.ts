@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'voluntarios',
+    loadChildren: () => import('./pages/voluntarios/voluntarios.module').then( m => m.VoluntariosPageModule)
+  },
 ];
 
 @NgModule({
