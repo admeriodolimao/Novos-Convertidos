@@ -1,0 +1,7 @@
+{
+  "name": "nc-fe-ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
