@@ -11,9 +11,30 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+
   {
-    path: 'voluntarios',
-    loadChildren: () => import('./pages/voluntarios/voluntarios.module').then( m => m.VoluntariosPageModule)
+    path: 'cadastrar-novo-convertido',
+    loadChildren: () => import('./pages/cadastrar-novo-convertido/cadastrar-novo-convertido.module').then( m => m.CadastrarNovoConvertidoPageModule)
+  },
+  {
+    path: 'pesquisar-novo-convertido',
+    loadChildren: () => import('./pages/pesquisar-novo-convertido/pesquisar-novo-convertido.module').then( m => m.PesquisarNovoConvertidoPageModule)
+  },
+  {
+    path: 'todos-os-novos-convertidos',
+    loadChildren: () => import('./pages/todos-os-novos-convertidos/todos-os-novos-convertidos.module').then( m => m.TodosOsNovosConvertidosPageModule)
+  },
+  {
+    path: 'cadastrar-voluntario',
+    loadChildren: () => import('./pages/cadastrar-voluntario/cadastrar-voluntario.module').then( m => m.CadastrarVoluntarioPageModule)
+  },
+  {
+    path: 'pesquisar-voluntario',
+    loadChildren: () => import('./pages/pesquisar-voluntario/pesquisar-voluntario.module').then( m => m.PesquisarVoluntarioPageModule)
+  },
+  {
+    path: 'todos-os-voluntarios',
+    loadChildren: () => import('./pages/todos-os-voluntarios/todos-os-voluntarios.module').then( m => m.TodosOsVoluntariosPageModule)
   },
 ];
 

@@ -1,0 +1,76 @@
+<ion-header [translucent]="true">
+
+  
+  <ion-item>
+    <ion-label routerLink="/home">Voltar</ion-label>
+  </ion-item>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-label class="title">Todos os Voluntários</ion-label>
+  <ion-list>
+    <ion-item-divider *ngFor="let voluntario of voluntarios">
+    <ion-card class="cards" >
+      <ion-label>
+       Id:  {{ voluntario.id }}
+        <br><br>
+    <h2>  Nome:   {{ voluntario.name }} </h2>
+    <br><br>
+    Telefone: {{ voluntario.mobilePhone | phonePipe }}
+      <br><br>
+     E-Mail:  {{ voluntario.email }}
+     <br><br>
+     CEP: {{ voluntario.postalCode }}
+      <br><br>
+      Endereço: {{ voluntario.address  }}
+      <br><br>
+     Número: {{ voluntario.addressNumber }}
+      <br><br>
+     Bairro: {{ voluntario.province }}
+     <br><br>
+     Cidade: {{ voluntario.city }}
+     <br><br>
+     Estado: {{ voluntario.state }}
+     <br><br>
+     Observações: {{ voluntario.observations }}
+     <br><br>
+     Onde Trabalha: {{ voluntario.company }}
+     <br><br>
+     Voluntário desde: {{ voluntario.createdAt | date: 'dd/MM/yyyy'}}
+    </ion-label> 
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" class="ion-text-end">
+          <!-- <ion-button fill="outline" size="small" (click)="editar(voluntario.id)">
+            Editar
+          </ion-button> -->
+          <ion-button fill="outline" color="danger" size="small" (click)="excluir(voluntario.id)">
+            Excluir
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    </ion-card>
+  </ion-item-divider>
+  </ion-list>
+
+
+</ion-content>
+
+<ion-fab slot="fixed" vertical="bottom" horizontal="end">
+  <ion-fab-button>
+    <ion-icon name="chevron-up-circle"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-fab-button>
+      <ion-icon name="home" routerLink="/home"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button>
+      <ion-icon name="add" routerLink="/cadastrar-voluntario"></ion-icon>
+    </ion-fab-button>
+ 
+  </ion-fab-list>
+</ion-fab>
+
+
+

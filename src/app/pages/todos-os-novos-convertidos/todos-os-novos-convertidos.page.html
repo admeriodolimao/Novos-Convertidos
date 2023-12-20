@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+
+  
+  <ion-item>
+    <ion-label routerLink="/home">Voltar</ion-label>
+  </ion-item>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-label class="title">Todos os Novos Convertidos</ion-label>
+  <ion-list>
+    <ion-item-divider *ngFor="let convertido of novosConvertidos">
+    <ion-card class="cards" >
+      <ion-label>
+       Id:  {{ convertido.id }}
+        <br><br>
+    <h2>  {{ convertido.name }} </h2>
+    <br>
+    Telefone: {{ convertido.telefone | phonePipe }}
+      <br><br>
+     E-Mail:  {{ convertido.email }}
+    
+      <br><br>
+      Data de Nascimento: {{ convertido.dataNascimento | date: 'dd/MM/yyyy' }}
+      <br><br>
+     Estado Civil: {{ convertido.statusRelacionamento }}
+      <br><br>
+     Já teve outra religiâo?: {{ convertido.jaTeveOutraReligiao }}
+    </ion-label> 
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" class="ion-text-end">
+          <!-- <ion-button fill="outline" size="small" (click)="editar(convertido.id)">
+            Editar
+          </ion-button> -->
+          <ion-button fill="outline" color="danger" size="small" (click)="excluir(convertido.id)">
+            Excluir
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    </ion-card >
+
+  </ion-item-divider>
+  </ion-list>
+</ion-content>
+
+<ion-fab slot="fixed" vertical="bottom" horizontal="end">
+  <ion-fab-button>
+    <ion-icon name="chevron-up-circle"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-fab-button>
+      <ion-icon name="home" routerLink="/home"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button>
+      <ion-icon name="add" routerLink="/cadastrar-novo-convertido"></ion-icon>
+    </ion-fab-button>
+ 
+  </ion-fab-list>
+</ion-fab>

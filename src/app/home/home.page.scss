@@ -25,3 +25,36 @@
 #container a {
   text-decoration: none;
 }
+
+.cards {
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.all-cards {
+  margin: 5px
+}
+
+.title {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 3%;
+  display: flex;
+  margin: auto;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25%; // Ajuste a altura conforme necessário
+
+  img {
+    border-radius: 50%; // Torna a imagem redonda
+    max-width: 100px; // Ajuste a largura máxima conforme necessário
+    max-height: 100px; // Ajuste a altura máxima conforme necessário
+    object-fit: cover; // Garante que a imagem cubra todo o espaço
+  }
+}

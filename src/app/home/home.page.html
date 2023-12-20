@@ -1,20 +1,37 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="image-container">
+    <img src="../../assets/logos/logoadme.png" alt="logoadme">
   </div>
+
+  <ion-label class="title">Formulário de Novos Convertidos</ion-label>
+  
+<div class="all-cards">
+
+<ion-card class="cards" routerLink="/cadastrar-novo-convertido">
+  <ion-title>Cadastrar Novo Convertido</ion-title>
+</ion-card>
+
+<ion-card class="cards" routerLink="/pesquisar-novo-convertido">
+  <ion-title>Pesquisar Novo Convertido</ion-title>
+</ion-card>
+
+<ion-card class="cards" routerLink="/todos-os-novos-convertidos">
+  <ion-title>Todos os Novos Convertidos</ion-title>
+</ion-card>
+
+<ion-card class="cards" routerLink="/cadastrar-voluntario">
+  <ion-title>Cadastrar Voluntário</ion-title>
+</ion-card>
+
+<ion-card class="cards" routerLink="/pesquisar-voluntario">
+  <ion-title>Pesquisar Voluntário</ion-title>
+</ion-card>
+
+<ion-card class="cards" routerLink="/todos-os-voluntarios">
+  <ion-title>Todos os Voluntários</ion-title>
+</ion-card>
+</div>
 </ion-content>

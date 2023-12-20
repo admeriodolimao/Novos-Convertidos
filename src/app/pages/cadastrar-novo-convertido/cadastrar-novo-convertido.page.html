@@ -1,0 +1,83 @@
+<ion-header [translucent]="true">
+
+  
+  <ion-item>
+    <ion-label routerLink="/home">Voltar</ion-label>
+  </ion-item>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ 
+
+
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <ion-label class="title">Formulário de Novos Convertidos</ion-label>
+  
+    <ion-item>
+
+      <ion-input label="Nome" formControlName="name"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+   
+      <ion-input label="E-Mail" formControlName="email" type="email"></ion-input>
+    </ion-item>
+  
+    <!-- <ion-item>
+
+      <ion-input label="Senha" formControlName="password" type="password"></ion-input>
+    </ion-item> -->
+  
+    <ion-item>
+
+      <ion-input label="Telefone" formControlName="telefone" type="tel"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+
+      <ion-input label="Status do Relacionamento" formControlName="statusRelacionamento"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+
+      <ion-input label="Já teve outra religião?" formControlName="jaTeveOutraReligiao"></ion-input>
+    </ion-item>
+  
+    <!-- <ion-item>
+      <ion-label position="floating">Data de Criação</ion-label>
+      <ion-input formControlName="dataCriacao" type="date"></ion-input>
+    </ion-item> -->
+  
+    <ion-item>
+      <ion-label position="floating">Data de Nascimento</ion-label>
+      <br>  <br>
+      <ion-datetime displayFormat="YYYY-MM-DD" (ionChange)="onDateChange($event.detail.value)">
+      </ion-datetime>
+    </ion-item>
+    
+  
+    <!-- Campo invisível 'role' -->
+    <!-- <input formControlName="role" type="hidden"> -->
+
+  
+    <ion-button expand="full" type="submit">Enviar</ion-button>
+  </form>
+  
+  
+
+</ion-content>
+
+<ion-fab slot="fixed" vertical="bottom" horizontal="end">
+  <ion-fab-button>
+    <ion-icon name="chevron-up-circle"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-fab-button>
+      <ion-icon name="home" routerLink="/home"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button>
+      <ion-icon name="search" routerLink="/pesquisar-novo-convertido"></ion-icon>
+    </ion-fab-button>
+ 
+  </ion-fab-list>
+</ion-fab>
